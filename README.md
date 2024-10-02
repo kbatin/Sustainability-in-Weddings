@@ -10,5 +10,6 @@ This project addresses a key business question: *Are wedding vendors with sustai
 
 This project not only answers the central business question but also demonstrates the ability to manage and analyze data effectively using SQL and Python, providing valuable insights for stakeholders in the wedding industry.
 
-Check the SQL code [here](BusinessAnalysis).
-Check the Python analysis [here](https://github.com/kbatin/Sustainability-in-Weddings/blob/main/Business_Analysis.html).
+Check the SQL code [here](https://github.com/kbatin/Sustainability-in-Weddings/blob/main/BusinessAnalysis).
+
+Check the Python analysis [here](https://github.com/kbatin/Sustainability-in-Weddings/blob/main/Business%20Analysis.ipynb).
