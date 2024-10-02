@@ -1,0 +1,52 @@
+-- selecting the tables for invitations
+SELECT t1.characteristic_id, t1.product_category, 
+        t1.product_type, t1.price_i, 
+        t1.weight_i_lb, t1.sustainability_rating,
+       t1.mailing_id, t1.vendor_id,
+       t2.product_id, t2.product_name,
+       t2.price_unit, t2.unit_vol, t2.price_ce, t3.vendor_name, t3.vendor_sustainable
+FROM products as t2 
+INNER JOIN inv_characteristics as t1
+ON t1.vendor_id = t2.vendor_id
+INNER JOIN vendors as t3
+ON t1.vendor_id = t3.vendor_id;
+
+
+-- average price of sustainable
+SELECT AVG(price_i) AS mean_price
+FROM inv_characteristics
+WHERE sustainability_rating = 1;
+
+-- average price of non-sustainable 
+SELECT AVG(price_i) AS mean_price
+FROM inv_characteristics
+WHERE sustainability_rating = 0;
+
+-- variance of sustainable
+SELECT VARIANCE(price_i) AS var_of_sus_prices
+FROM inv_characteristics
+WHERE sustainability_rating = 1;
+
+-- variance of nonsustainable
+SELECT VARIANCE(price_i) AS var_of_sus_prices
+FROM inv_characteristics
+WHERE sustainability_rating = 0;
+
+
+-- selecting all products
+SELECT *
+from products;
+
+-- selecting all inv vendors 
+select *
+from vendors
+where vendor_id LIKE 'inv%';
+
+-- trying to combine the products and vendors
+select  t2.product_id, t2.product_name,
+       t2.price_unit, t2.unit_vol, t2.price_ce,
+       t1.vendor_id, t1.vendor_depart, t1.vendor_name,
+       t1.vendor_location, t1.vendor_sustainable, t1.vendor_rating
+from products as t2
+inner join vendors as t1
+on t2.vendor_id = t1.vendor_id;
