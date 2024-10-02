@@ -12,4 +12,3 @@ This project not only answers the central business question but also demonstrate
 
 Check the SQL code [here](BusinessAnalysis).
 Check the Python analysis [here](https://github.com/kbatin/Sustainability-in-Weddings/blob/main/Business_Analysis.html).
-[View the Business Analysis Report](https://yourusername.github.io/your-repository-name/Business%20Analysis.html)
